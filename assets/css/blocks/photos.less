@@ -1,0 +1,68 @@
+//main: ../styles.less
+
+.Photos {
+    margin-bottom: 70px;
+}
+
+
+.photos__item {
+    width: 100px;
+    margin: 0 10px;
+    transform: scale(1);
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .4;
+        position: absolute;
+    }
+
+    & img {
+        max-width: 100%;
+        width: 100%;
+        height: 90px;
+        object-fit: cover;
+    }
+
+    &.slick-center {
+        transform: scale(1.2);
+
+        &:before {
+            opacity: 0;
+        }
+
+        & img {
+            height: 100px;
+        }
+    }
+}
+
+.photos__block .slick-track {
+    display: flex;
+    align-items: center;
+}
+
+.bigphotos__block {
+    margin-bottom: 30px;
+}
+
+.bigphotos__item {
+
+    & img {
+        max-width: 100%;
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+}
+
+.bigphotos__item--objectfit {
+
+    & img {
+        object-fit: fill;
+    }
+}
